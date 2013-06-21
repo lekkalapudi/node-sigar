@@ -1,6 +1,7 @@
 
 #include <v8.h>
 #include <node.h>
+#include <string.h>
 
 #include "./node_sigar_format.cc"
 
