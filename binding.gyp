@@ -6,7 +6,7 @@
       'cflags!': [ '-fno-exceptions' ],
       'cflags_cc!': [ '-fno-exceptions' ],
       "libraries": [
-        "<(module_root_dir)/build/sigar/src/.libs/libsigar.a"
+        "<(module_root_dir)/deps/sigar/src/.libs/libsigar.a"
       ],
       "include_dirs": [
         'deps/sigar/include'
