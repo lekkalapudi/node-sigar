@@ -29,7 +29,7 @@
     "engines": { "node": ">= 0.6.0" },
     "scripts": {
         "cmakenotworking": "mkdir -p build/sigar && git submodule update --init --recursive && cp -rp deps/sigar/* build/sigar/ && cd build/sigar && cmake -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=false . && cmake --build . && node-gyp configure && node-gyp build",
-        "preinstall": "cd deps/sigar && ./autogen.sh && ./configure --with-pic && make && cd ../.. && node-gyp configure && node-gyp build",
+        "preinstall": "BUILDDIR=$(mktemp -d) && mkdir build && ln -s $BUILDDIR/deps/sigar build/sigar && ls -a && cp -rp . $BUILDDIR && cd $BUILD_DIR && git submodule update --init --recursive && cd deps/sigar ./autogen.sh && ./configure --with-pic && make && cd ../.. && node-gyp configure && node-gyp build",
         "test": "mocha"
     }
 }
