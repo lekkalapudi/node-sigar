@@ -26,7 +26,7 @@
         }],
         ['OS=="mac"', {
           'sources': [ 'deps/sigar/src/os/darwin/darwin_sigar.c' ],
-          'include_dirs': [ 'deps/sigar/src/darwin/win32' ],
+          'include_dirs': [ 'deps/sigar/src/os/darwin' ],
           'xcode_settings': {
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
           }
