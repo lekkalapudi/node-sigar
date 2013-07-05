@@ -26,6 +26,5 @@
     ],
     "main": "index",
     "gypfile": true,
-    "scripts": { "preinstall": "git submodule update --init --recursive" },
     "engines": { "node": ">= 0.6.0" }
 }
